@@ -1,4 +1,5 @@
 # Menerbitkan isi folder build/ ke GitHub Pages setiap kali ada push ke main.
+# Dua job (unggah lalu terbitkan) agar artefak sudah terdaftar sebelum deploy-pages mencarinya.
 name: Terbitkan ke GitHub Pages
 
 on:
@@ -16,16 +17,21 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - id: deployment
         uses: actions/deploy-pages@v4
