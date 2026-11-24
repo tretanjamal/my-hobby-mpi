@@ -7,8 +7,10 @@ Quick Check, dan refleksi.
 
 ▶️ **Buka online:** https://tretanjamal.github.io/my-hobby-mpi/
 
-> **Status: build 0.9.** Kode sudah lengkap (DEV-01 – 06) dan lolos uji, tetapi gambar, suara, font, dan PDF
-> cetaknya belum dibuat. Untuk sementara, gambar tampil sebagai kotak pengganti dan suara tampil sebagai teks.
+> **Status: build 1.0-rc.** Kode lengkap (DEV-01 – 06) dan **semua aset sudah ada**: 32 gambar, 91 suara
+> (narasi, lagu "My Hobby", efek), 3 font, dan 6 PDF bahan cetak. Aset dibuat otomatis oleh generator di repo gim
+> ([hobby-hunt-game/tools/aset_otomatis](https://github.com/tretanjamal/hobby-hunt-game/tree/main/tools/aset_otomatis)).
+> Narasi memakai suara bawaan Windows dan bisa ditimpa rekaman asli kapan saja.
 
 ## Cara memakai
 
@@ -24,19 +26,20 @@ Quick Check, dan refleksi.
 build/                         MPI siap pakai (ini yang diterbitkan ke GitHub Pages)
   index.html                   halaman utama
   js/  data/  css/             kode, isi materi, tampilan
-  assets/                      tempat gambar, animasi, suara, dan font (masih kosong)
-  print/                       tempat PDF cetak (LKPD dan bahan cetak lain)
+  assets/                      gambar, animasi, suara, dan font
+  print/                       6 PDF cetak: flashcard, kartu charades, 2 LKPD, refleksi murid, observasi guru
 tools/optimasi_gambar.py       memperkecil ukuran gambar (Python + Pillow)
 PLANNING_MPI_My-Hobby_v1.1.md   rancangan MPI (IDD)
 PROMPT_SET_MPI_My-Hobby_v1.0.md prompt pembuatan gambar, PDF, suara, dan musik
 QA_LAPORAN_MPI_v0.9.md          hasil uji build 0.9
 ```
 
-## Menambahkan aset dan memperbarui
+## Mengganti aset
 
-1. Buat aset dari `PROMPT_SET_MPI_My-Hobby_v1.0.md`, lalu simpan ke folder `build/assets/...` dan `build/print/`
-   sesuai nama file di prompt set. **Nama file harus sama persis, termasuk huruf besar/kecil**,
-   karena GitHub Pages membedakannya.
+1. Untuk membuat ulang semua aset, pakai generator di repo gim (lihat tautan di atas). Untuk mengganti dengan
+   buatan sendiri (gambar dari prompt set, rekaman suara, lagu resmi), simpan file dengan **nama yang sama persis,
+   termasuk huruf besar/kecil**, karena GitHub Pages membedakannya. Jika lagu diganti, sesuaikan `songTiming`
+   di `build/data/content.js`.
 2. Perkecil gambar: `python tools/optimasi_gambar.py`
 3. Unggah perubahan:
    ```

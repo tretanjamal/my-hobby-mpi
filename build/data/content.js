@@ -101,10 +101,10 @@ window.CONTENT = {
   ],
   chorusFrom: 6,
 
-  /* Penanda waktu lirik (detik). PERKIRAAN untuk lagu 110 BPM —
-     sesuaikan setelah file mus_hobby_song.mp3 final tersedia.
+  /* Penanda waktu lirik (detik), cocok dengan mus_hobby_song.mp3 buatan tools/aset_otomatis/suara/buat_suara.py
+     (±109 BPM, 8 ketukan = 4,4 detik per baris). Jika memakai lagu lain, sesuaikan angka ini.
      intro = detik baris pertama, lineSec = lama tiap baris, cycles = jumlah putaran bait+refrein. */
-  songTiming: { intro: 4.0, lineSec: 4.4, cycles: 2 },
+  songTiming: { intro: 4.4, lineSec: 4.4, cycles: 2 },
 
   reflection: [
     { text: "I can say 6 hobbies.",            audio: "vo_reflect_01" },

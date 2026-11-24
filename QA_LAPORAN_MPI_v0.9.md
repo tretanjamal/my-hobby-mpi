@@ -7,7 +7,7 @@
 | Tanggal Uji | 24 November 2026 |
 | Acuan | `PLANNING_MPI_My-Hobby_v1.1.md` bagian 12.4 (performa) dan 16 (QA) |
 | Lingkungan Uji | Browser bawaan Claude (Chromium) melalui server lokal; viewport desktop dan 1024 × 768 |
-| Status | **Kode siap.** Menunggu aset (32 gambar, 91 suara, 3 font, 6 PDF) sebelum rilis 1.0 |
+| Status | **Kode siap.** Aset lengkap dibuat otomatis (24 Nov 2026, generator di repo gim `tools/aset_otomatis`): 32/32 gambar, 91/91 suara, 3/3 font, 6/6 PDF |
 
 ---
 
