@@ -1,0 +1,11 @@
+FONT MPI "My Hobby"
+===================
+
+Letakkan 3 file font berikut di folder ini (semua berlisensi SIL Open Font License, gratis dari Google Fonts):
+
+1. Fredoka-SemiBold.ttf   -> https://fonts.google.com/specimen/Fredoka   (folder "static" di dalam ZIP unduhan)
+2. Baloo2-Medium.ttf      -> https://fonts.google.com/specimen/Baloo+2   (folder "static")
+3. Nunito-Regular.ttf     -> https://fonts.google.com/specimen/Nunito    (folder "static")
+
+Nama file harus persis seperti di atas.
+Jika font belum ada, MPI tetap berjalan memakai font cadangan bawaan Windows (Segoe UI / Trebuchet MS).

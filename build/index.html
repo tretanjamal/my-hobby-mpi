@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Hobby — Let's Play & Talk!</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="viewport">
+    <div id="stage" aria-live="polite">
+      <!-- Scene aktif dirender di sini -->
+      <main id="scene-root"></main>
+
+      <!-- Tombol tetap (planning 9.4) -->
+      <button class="chrome-btn" id="btn-audio" title="Putar suara (Spasi)" aria-label="Putar suara"></button>
+      <button class="chrome-btn" id="btn-menu"  title="Menu (M)"            aria-label="Menu"></button>
+      <button class="chrome-btn" id="btn-back"  title="Sebelumnya (←)"      aria-label="Sebelumnya"></button>
+      <button class="chrome-btn" id="btn-next"  title="Berikutnya (→)"      aria-label="Berikutnya"></button>
+      <button class="chrome-btn small" id="btn-notes" title="Teacher Notes (N)" aria-label="Teacher Notes"></button>
+      <div id="progress" aria-hidden="true"></div>
+
+      <!-- Panel catatan guru -->
+      <aside id="notes" aria-hidden="true"></aside>
+
+      <!-- Menu utama -->
+      <section id="menu" aria-hidden="true"></section>
+
+      <div id="toast" role="status"></div>
+    </div>
+  </div>
+
+  <script src="data/content.js"></script>
+  <script src="data/assets.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/scenes.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

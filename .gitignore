@@ -1,0 +1,17 @@
+# Cadangan gambar dari tools/optimasi_gambar.py
+build_asli_gambar/
+
+# Paket rilis (unggah lewat GitHub Releases, bukan ke repo)
+*.zip
+
+# Python
+__pycache__/
+*.pyc
+
+# Windows / macOS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Pengaturan lokal Claude Code
+.claude/settings.local.json
